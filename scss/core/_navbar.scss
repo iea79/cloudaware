@@ -1,0 +1,15 @@
+/* Navbar
+-------------------------------------------------------------------------------*/
+.navbar {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+
+	&__item {
+		// display: inline-block;
+		margin: 5px;
+	}
+
+	&__link {}
+}

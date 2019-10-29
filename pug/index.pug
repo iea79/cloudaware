@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+
+        link(rel="stylesheet", type="text/css", href="css/style.css")
+    body
+        header.header
+            .header__content
+                .header__left
+                    a.logo(href="/")
+                        img(src="img/logo.png", alt="alt")
+                nav.header__right
+                    ul.navbar
+                        - var n = 0;
+                        -for (i=0; i<5; i++) {
+                            li.navbar__item
+                                a.navbar__link(href="#") Page #{i}
+                        -};
+                        //- while n < 6
+                        //-     li.navbar__item
+                        //-         a.navbar__link(href="#")= "Page " + n++
+
+        main.main_content
+            .container_center
+
+                .grid
+                    .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.
+                    .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!
+                    .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?
+
+        footer.footer
+            .container_center
+                p
+                | &copy; 2016 |
+                i.fa.fa-github(aria-hidden='true') &nbsp;
+                a(href='#') View Source

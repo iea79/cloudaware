@@ -1,0 +1,13 @@
+{
+    "name": "busforward",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "latest",
+        "select2": "~4.0",
+        "slick-carousel": "latest",
+        "inputmask": "latest"
+    },
+    "ignoredDependencies": [
+        "jquery"
+    ]
+}

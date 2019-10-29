@@ -1,0 +1,24 @@
+/* Header
+ ----------------------------------------------------------------------------- */
+.header {
+	background-color: #ccc;
+	padding: 10px 0;
+	@extend %clear_a;
+
+	&__content {
+		max-width: $container_width;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
