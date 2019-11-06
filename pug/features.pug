@@ -1,0 +1,27 @@
+extends template.pug
+block variables
+    -var bodyClass = 'featuresPage';
+
+block content
+    .pageTop
+        .container_center
+            ul.breadcrumb
+                li
+                    a(href="/") Home
+                li
+                    a(href="/") Features
+
+            h1.page__title Features
+
+
+    .container_center
+        .featuresList
+            - var feat = ['Violation routing','Exemption handling','Approval workflow','Compliance performance','Multi-cloud - AWS, GCP, Azure','Supports JIRA and ServiceNow','Plan Remediation Activities','Write your own policies'];
+            each item, index in feat
+                .featuresList__item
+                    .featuresList__img
+                        img(src="img/feature-"+(index+1)+".jpg", alt="alt")
+                    .featuresList__descr
+                        .featuresList__name= item
+                        .featuresList__text Compliance engine routes and escalates violations to specific teams and individuals. Using tags and other data from CMDB, compliance engine will identify security and compliance contacts for every configuration item involved in a violation. Assigning remediation tasks to the most appropriate team is the first step in pursuing expedited resolution. Using violation routing feature, SecDevOps teams can reduce their workloads by automatically forwarding remediation requests directly to the account and application owners. 
+                        .featuresList__more Show more

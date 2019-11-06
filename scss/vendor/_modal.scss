@@ -1,4 +1,5 @@
 // Modal / bootstrap ------------------------------------------
+
 .modal {
     display: none;
     overflow: auto;
@@ -11,9 +12,11 @@
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+
     &-open {
         overflow: hidden;
     }
+
     &-close {
         position: absolute;
         width: 21px;
@@ -21,7 +24,8 @@
         right: 23px;
         top: 23px;
         // background: image-url('close.svg') no-repeat center center;
-        &:before,&:after {
+        &:after,
+        &:before {
             content: '';
             position: absolute;
             display: block;
@@ -29,41 +33,53 @@
             border-top: 1px solid $main_color;
             top: 10px;
         }
+
         &:before {
             transform: rotate(45deg);
         }
+
         &:after {
             transform: rotate(-45deg);
         }
+
         &:hover {
-            opacity: .8;
+            opacity: 0.8;
         }
     }
+
     &.fade .modal-dialog {
         transform: translate(0, -25%);
         transition: transform 0.3s ease-out;
     }
-    &.in .modal-dialog {
-        transform: translate(0, 0);
-        position: relative;
+
+    &.in {
+        display: flex !important;
+        align-items: center;
+
+        .modal-dialog {
+            transform: translate(0, 0);
+            position: relative;
+        }
     }
+
     &-dialog {
         position: relative;
-        width: auto;
-        margin: 10px auto;
-        max-width: 690px;
+        width: 100%;
+        margin: 1em auto;
+        max-width: 68.75em;
     }
 
     &-content {
         position: relative;
         background-color: #fff;
-        border: 1px solid #999;
-        border: 1px solid rgba(0,0,0,.2);
-        border-radius: 6px;
-        box-shadow: 0 3px 9px rgba(0,0,0,.5);
+        // border: 1px solid #999;
+        // border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0.35em;
+        box-shadow: none;
         background-clip: padding-box;
         outline: 0;
-        padding: 46px 53px;
+        padding: 4em 9em;
+        text-align: center;
     }
 
     &-backdrop {
@@ -74,22 +90,24 @@
         left: 0;
         z-index: 1040;
         background-color: #000;
+
         &.fade {
             opacity: 0;
             filter: alpha(opacity=0);
         }
 
         &.in {
-            opacity: .5;
-            filter: alpha(opacity=50);
+            opacity: 0.3;
+            filter: alpha(opacity=30);
         }
     }
 
     &-header {
-        padding: 15px 0;
-        min-height: 16.42857143px;
-        color: #666;
-        font-size: 18px;
+        padding: 1em 0;
+        // min-height: 16.42857143px;
+        color: $color_dark;
+        // font-size: 18px;
+
         .close {
             margin-top: -2px;
         }
@@ -97,7 +115,9 @@
 
     &-title {
         margin: 0;
-        line-height: 1.42857143;
+        font-size: 2.625em;
+        line-height: 1.2;
+        margin-bottom: 0.8em;
     }
 
     &-body {
@@ -106,17 +126,17 @@
     }
 
     &-footer {
-        margin-top: 15px;
-        padding: 19px 20px 20px;
+        margin-top: 1em;
+        padding: 1em;
         text-align: right;
         border-top: 1px solid #e5e5e5;
+
         .btn+.btn {
-            margin-left: 5px;
             margin-bottom: 0;
         }
 
         .btn-group .btn+.btn {
-            margin-left: -1px;
+            // margin-left: -1px;
         }
 
         .btn-block+.btn-block {
@@ -125,6 +145,3 @@
     }
 
 }
-
-
-

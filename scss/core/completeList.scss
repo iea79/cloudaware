@@ -1,0 +1,62 @@
+.completeList {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__wrapper {
+        padding: 0;
+        background: url("../img/Ellipse.svg") center no-repeat, #fff url("../img/dashed-mob.svg") center no-repeat;
+        background-size: 16em, 100%;
+        min-height: 4.1em;
+        transition: padding 0.3s;
+
+        @media (min-width: 768px) {
+            background: url("../img/Ellipse.svg") center no-repeat, #fff url("../img/dashed.svg") center no-repeat;
+            background-size: 18em, 100%;
+        }
+
+        .complete.open & {
+            background: none;
+            background-color: $color_light;
+            padding: 10em 0 7.4em;
+
+            @media (min-width: 768px) {
+                padding: 7.3em 0 3.4em;
+            }
+        }
+
+    }
+
+    &__item {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4.2em;
+        display: none;
+
+        @media (min-width: 768px) {
+            width: 20%;
+
+        }
+
+        img {
+            max-width: 64%;
+            filter: grayscale(1);
+
+            @media (min-width: 768px) {
+                max-width: 53.3%;
+            }
+
+            @media (min-width: 992px) {
+                max-width: 67%;
+            }
+        }
+
+        .complete.open & {
+            display: flex;
+            // display: block;
+        }
+
+    }
+
+    .complete.open & {}
+}

@@ -1,0 +1,25 @@
+.to_top {
+    position: fixed;
+    right: 2em;
+    bottom: 5em;
+    width: 5em;
+    height: 5em;
+    z-index: 20;
+    background: #434343 url("../img/to-top.svg") center no-repeat;
+    background-size: 41%;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background, bottom, opacity;
+
+    &.show {
+        // right: 2em;
+        bottom: 9em;
+        opacity: 1;
+    }
+
+    &:hover {
+        background-color: lighten($color_dark, 10%);
+    }
+}

@@ -6,8 +6,7 @@
  *
  */
 @import 'mixins/mixin'; // Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900); // Mixin for include fonts
-@include font-face("ArialMT", 'fonts/CenturyGothic', normal, normal);
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap&subset=cyrillic');
 // Import files
 @import 'variables/variables';
 @import 'core/reset';
@@ -22,3 +21,95 @@
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
+@import 'core/line';
+@import 'core/logo';
+@import 'core/section';
+@import 'core/fScreen';
+@import 'core/turnkey';
+@import 'core/violation';
+@import 'core/complete';
+@import 'core/completeList';
+@import 'core/contacts';
+@import 'core/to_top';
+@import 'core/resources';
+@import 'core/resourcesItem';
+@import 'core/resourcesList';
+@import 'core/resourcesBlog';
+@import 'core/resourcesVideo';
+@import 'core/feature';
+@import 'core/featuresList';
+@import 'core/page';
+
+@import 'vendor/modal';
+
+.form {
+    &__title {
+        font-size: 2.1em;
+        font-weight: 400;
+        margin-bottom: 1.4em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 1em;
+
+        }
+
+        a {
+            color: $main_color;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__row {}
+
+    &__action {
+        .btn {}
+    }
+
+    &__shoice {
+        font-size: 2.2em;
+        margin-top: 1.8em;
+
+        @media (min-width: 768px) {
+            margin-top: 1.3em;
+        }
+
+        a {
+            color: $main_color;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.desktop {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mobile {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.getCase {
+    .form {
+        max-width: 42em;
+        margin: auto auto 2em;
+
+        input {
+            text-align: center;
+        }
+    }
+}

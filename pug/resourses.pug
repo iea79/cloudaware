@@ -1,0 +1,95 @@
+extends template.pug
+block variables
+    -var bodyClass = 'resourcesPage';
+
+block content
+    .resourcesList__top
+        .container_center
+            ul.breadcrumb
+                li
+                    a(href="/") Home
+                li
+                    a(href="/") Resources
+
+            h1.page__title.text_contrast Resources
+
+            .resourcesList__tabs
+                .resourcesList__tab.active(data-tab="#datasheet") Datasheet
+                .resourcesList__tab(data-tab="#case") Case studies
+                .resourcesList__tab(data-tab="#blog") Blog
+                .resourcesList__tab(data-tab="#video") Videos
+
+    .resourcesList__bottom
+        .container_center
+            .resourcesList__pane.active#datasheet(data-pane="")
+                .resourcesItem
+                    .resourcesItem__top
+                        .resourcesItem__name Datasheet
+                        .resourcesItem__date 16.08.2019
+                    .resourcesItem__img(style="background-image: url()")
+                        .resourcesItem__title Some heading to explain shortly what’s going on
+                    .resourcesItem__short Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus magnis leo vitae adipiscing eget. Nulla pharetra vitae, diam a, tortor egestas neque malesuada. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. 
+                        a.resourcesItem__more(href="#") Show more
+
+                .resourcesItem
+                    .resourcesItem__top
+                        .resourcesItem__name Datasheet
+                        .resourcesItem__date 16.08.2019
+                    .resourcesItem__img(style="background-image: url()")
+                        .resourcesItem__title Some heading to explain shortly what’s going on
+                    .resourcesItem__short Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus magnis leo vitae adipiscing eget. Nulla pharetra vitae, diam a, tortor egestas neque malesuada. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. 
+                        a.resourcesItem__more(href="#") Show more
+
+            .resourcesList__pane#case(data-pane="")
+                .resourcesItem(data-toggle="modal" data-target="#getCase")
+                    .resourcesItem__top
+                        .resourcesItem__name Case study №1
+                        .resourcesItem__date 16.08.2019
+                    .resourcesItem__img(style="background-image: url()")
+                        .resourcesItem__title Some heading to explain shortly what’s going on
+                    .resourcesItem__short Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus magnis leo vitae adipiscing eget. Nulla pharetra vitae, diam a, tortor egestas neque malesuada. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. 
+                        a.resourcesItem__more(href="#") Show more
+
+                .resourcesItem(data-toggle="modal" data-target="#getCase")
+                    .resourcesItem__top
+                        .resourcesItem__name Case study №2
+                        .resourcesItem__date 16.08.2019
+                    .resourcesItem__img(style="background-image: url()")
+                        .resourcesItem__title Some heading to explain shortly what’s going on
+                    .resourcesItem__short Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus magnis leo vitae adipiscing eget. Nulla pharetra vitae, diam a, tortor egestas neque malesuada. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. Mauris hac vestibulum, enim pharetra. Urna enim, non posuere risus at. Congue gravida purus eget mattis pellentesque feugiat fermentum arcu. 
+                        a.resourcesItem__more(href="#") Show more
+            .resourcesList__pane#blog(data-pane="")
+                .resourcesBlog
+                    each val in ['','','','','','','','','','','','']
+                        a.resourcesBlog__item(href="#")
+                            .resourcesBlog__img(style="background-image: url()")
+                            .resourcesBlog__name Article 
+                            .resourcesBlog__text Aliquam viverra in viverra ut ornare suspendisse nibh nibh facilisi nisi dolor, urna, vel blandit sit.
+                            .resourcesBlog__more Show more
+
+            .resourcesList__pane#video(data-pane="")
+                .resourcesVideo
+                    each val in ['','','','','','']
+                        .resourcesVideo__item
+                            .resourcesVideo__wrap.video__wrapper.js_youtube#1vmDYpMp0uc
+                            .resourcesVideo__name Video
+                            .resourcesVideo__text Aliquam viverra in viverra ut ornare suspendisse nibh nibh facilisi nisi dolor, urna, vel blandit sit.
+                            a.resourcesVideo__more(href="#") Show more
+
+
+        // Button trigger modal getCase
+        //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#getCase") Click to open modal
+        // Begin Modal getCase
+        .modal.fade.getCase#getCase
+            .modal-dialog
+                .modal-content
+                    //- a(href="#" class="modal-close" data-dismiss="modal")
+                    .modal-header
+                        .modal-title Please, leave your e-mail address to be able to see the case studies.
+                    .modal-body 
+                        form.form(action="")
+                            .form__row
+                                input(type="text", placeholder="Your e-mail")
+                            .form__action
+                                button.btn(type="submit") Send
+        // End modal getCase

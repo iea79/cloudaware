@@ -1,0 +1,13 @@
+.page {
+    &Top {
+        padding-top: 8.9em;
+    }
+
+    &__title {
+        font-size: 3.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1.3em;
+        color: $color_dark;
+    }
+}

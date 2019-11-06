@@ -1,39 +1,223 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-  <header class="header">
-    <div class="header__content">
-      <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-      <nav class="header__right">
-        <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 0</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 1</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 2</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 3</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 4</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="main_content">
-    <div class="container_center">
-      <div class="grid">
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Compliance Engine - CloudAware</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css?1.1"/>
+  </head>
+  <body class="home">
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Compliance Engine"/><span>Compliance Engine</span></a></div>
+        <div class="header__right">
+          <div class="nav__toggle"><img src="img/menu.svg" alt=""/></div>
+          <nav class="nav">
+            <div class="nav__toggle"><img src="img/close.svg" alt="Close menu"/></div>
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="features.html">Features</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="resourses.html">Resources</a></li>
+            </ul>
+            <div class="mobile nav__bottom">
+              <div class="nav__label">Visit our main website</div><a href="https://www.cloudaware.com/"><img src="img/cloud.svg" alt="CloudAware"/></a>
+            </div>
+          </nav>
+          <div class="header__action"><a class="btn btn_sm btn_outline btn_request" href="https://www.cloudaware.com/schedule-a-demo.html">request demo</a><a class="btn btn_sm btn_signup" href="https://cloudaware.com/create-account/">Sign up</a><a class="btn btn_sm btn_success btn_login" href="https://www.cloudaware.com/signin/">Sign in</a></div>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="container_center">
-      <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main class="main_content">
+      <!-- begin fScreen-->
+      <section class="fScreen" id="home">
+        <div class="fScreen__layer fScreen__layer_1" data-speed="45"></div>
+        <div class="fScreen__layer fScreen__layer_2" data-speed="25"></div>
+        <div class="fScreen__layer fScreen__layer_3" data-speed="10"></div>
+        <div class="container_center">
+          <div class="fScreen__content">
+            <div class="fScreen__logo"><a href="https://www.cloudaware.com"><img src="img/cloud.svg" alt="CloudAware"/></a></div>
+            <h2 class="section__title">Compliance Engine</h2>
+            <div class="fScreen__text">450+ policies to identify spending waste and security holes. Workflow templates to route, escalate and fix fast.</div>
+            <div class="fScreen__action"><a class="btn btn_contrast" href="https://cloudaware.com/create-account/">Try now</a></div>
+          </div>
+        </div>
+      </section>
+      <!-- end fScreen-->
+      <!-- begin turnkey-->
+      <section class="turnkey" id="turnkey">
+        <div class="container_center">
+          <h2 class="section__title">Turnkey Solution with Process Templates</h2>
+          <div class="turnkey__content">
+            <div class="turnkey__left"><img src="img/cis.jpg" alt=""/></div>
+            <div class="turnkey__right"><img src="img/turnkey.jpg" alt=""/></div>
+          </div>
+        </div>
+      </section>
+      <!-- end turnkey-->
+      <!-- begin complete-->
+      <section class="complete line_withe" id="complete-list">
+        <div class="complete__top">
+          <h2 class="section__title">Complete list of compliance libraries</h2>
+          <div class="complete__toggle"><img src="img/duble-arrow.png" alt=""/></div>
+        </div>
+        <div class="line_light completeList__wrapper">
+          <!-- begin container_center-->
+          <div class="container_center">
+            <div class="completeList">
+              <div class="completeList__item"><img src="img/pci.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/hpaa.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/gdpr.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/aicpa.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/iso.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/cis.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/nist.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/nist-2.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/fedramp.png" alt=""/></div>
+              <div class="completeList__item"><img src="img/ccm.png" alt=""/></div>
+            </div>
+          </div>
+          <!-- end container_center-->
+        </div>
+      </section>
+      <!-- end complete-->
+      <!-- begin violation-->
+      <section class="violation line_withe" id="violation">
+        <div class="container_center">
+          <h2 class="section__title text_center">VIOLation life cycle management</h2>
+          <div class="section__sub text_center">Optimize your compliance implementation</div>
+          <div class="violation__content">
+            <div class="violation__row">
+              <div class="violation__img"><img src="img/violation-1.jpg" alt="Violation Routing"/></div>
+              <div class="violation__text">
+                <div class="violation__title">Violation Routing</div>
+                <div class="violation__descr">Compliance engine routes and escalates violations to specific teams and individuals. Using tags and other data from CMDB, compliance engine will identify security and compliance contacts for every configuration item involved in a violation. Assigning remediation tasks to the most appropriate team is the first step in pursuing expedited resolution. Using violation routing feature, SecDevOps teams can reduce their workloads by automatically forwarding remediation requests directly to the account and application owners. </div>
+              </div>
+            </div>
+            <div class="violation__row">
+              <div class="violation__img"><img src="img/violation-2.jpg" alt="Enforcement  Handling"/></div>
+              <div class="violation__text">
+                <div class="violation__title">Enforcement  Handling</div>
+                <div class="violation__descr">Compliance engine is designed to allow those responsible for remediation to request an appeal from cloud security and compliance operations. Using Cloudaware CMDB workflows, appeal request can be escalated to multiple stakeholders. Ignoring violations even for legitimate reasons creates poor security governance culture where subsequently legitimate violations are likely be ignored at some point. By dealing with legitimate violations using a process driven approach where no violation remains ignored, security teams not only protect cloud infrastructure but also nurture culture of responsibility and transparency.</div>
+              </div>
+            </div>
+            <div class="violation__row">
+              <div class="violation__img"><img src="img/violation-3.jpg" alt="Approval Workflow"/></div>
+              <div class="violation__text">
+                <div class="violation__title">Approval Workflow</div>
+                <div class="violation__descr">Approval workflows allow compliance engine administrators to create automated processes to handle appeal requests in response to compliance violations. Compliance engine supports advanced approval workflows where multiple concurrent stakeholders are required for a sign off as well as staggered processes where various department representatives will sign off sequentially. Cloudaware approval workflows feature is designed to avoid situations where violations are in a dead end state and are ignored.</div>
+              </div>
+            </div>
+            <div class="violation__row">
+              <div class="violation__img"><img src="img/violation-4.jpg" alt="Compliance Performance"/></div>
+              <div class="violation__text">
+                <div class="violation__title">Compliance Performance</div>
+                <div class="violation__descr">Compliance engine provides insightful indicators about how various teams are handling compliance violations. Besides standard metrics, such as violation volume over time and mean time to repair, compliance engine dashboards show which teams are overloaded with violations and will not be able to resolve violations within a pre-configured timeline. Customers are able to compare their statistics, such as mean time to repair, exception rate and others against statistical average of other Cloudaware customers. This feature helps customers to establish a point of reference of how they are performing relative to the industry standard and whether their processes require an improvement.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="violation__action"><a class="btn" href="https://cloudaware.com/create-account/">Try now</a></div>
+      </section>
+      <!-- end violation-->
+      <!-- begin feature-->
+      <section class="feature line_withe" id="feature">
+        <div class="container_center">
+          <h2 class="section__title text_center">Additional Features</h2>
+          <div class="feature__list"><a class="feature__item" href="#">
+              <div class="feature__img"><img src="img/feature-1.png" alt="Multi-Сloud: AWS, GCP, Azure"/></div>
+              <div class="feature__name">Multi-Cloud: <br>AWS, GCP, Azure</div></a><a class="feature__item" href="#">
+              <div class="feature__img"><img src="img/feature-2.png" alt="Supports JIRA and ServiceNow"/></div>
+              <div class="feature__name">Supports JIRA <br>and ServiceNow</div></a><a class="feature__item" href="#">
+              <div class="feature__img"><img src="img/feature-3.png" alt="Plan Remediation Activities"/></div>
+              <div class="feature__name">Plan Remediation <br>Activities</div></a><a class="feature__item" href="#">
+              <div class="feature__img"><img src="img/feature-4.png" alt="Write your own policies"/></div>
+              <div class="feature__name">Write your <br>own policies</div></a></div>
+          <div class="feature__action"><a class="btn" href="#">More</a></div>
+        </div>
+      </section>
+      <!-- end feature-->
+      <!-- begin resources-->
+      <section class="resources" id="resources">
+        <div class="container_center">
+          <h2 class="section__title text_center">Resources</h2>
+          <div class="resources__list"><a class="resources__item" href="#">
+              <div class="resources__img"><img src="img/resources-1.jpg" alt=""/></div>
+              <div class="resources__descr">
+                <div class="resources__name">Datasheet</div>
+                <div class="resources__short">Download Complaince Engine datasheet</div>
+                <div class="resources__more">Show more</div>
+              </div></a><a class="resources__item" href="#">
+              <div class="resources__img"><img src="img/resources-2.jpg" alt=""/></div>
+              <div class="resources__descr">
+                <div class="resources__name">Case Studies</div>
+                <div class="resources__short">Visit our customer's case studies.</div>
+                <div class="resources__more">Show more</div>
+              </div></a><a class="resources__item" href="#">
+              <div class="resources__img"><img src="img/resources-3.jpg" alt=""/></div>
+              <div class="resources__descr">
+                <div class="resources__name">Blog</div>
+                <div class="resources__short">Take a tour of Compliance Engine Blog articles.</div>
+                <div class="resources__more">Show more</div>
+              </div></a><a class="resources__item" href="#">
+              <div class="resources__img"><img src="img/resources-4.jpg" alt=""/></div>
+              <div class="resources__descr">
+                <div class="resources__name">Videos</div>
+                <div class="resources__short">Check out our short YouTube videos about Compliance Engine.</div>
+                <div class="resources__more">Show more</div>
+              </div></a></div>
+          <div class="resources__action"><a class="btn" href="resourses.html">More</a></div>
+        </div>
+      </section>
+      <!-- end resources-->
+      <!-- begin contacts-->
+      <section class="contacts" id="contacts">
+        <div class="container_center">
+          <h2 class="section__title text_center">still have questions left?</h2>
+          <form class="form" action="#" method="post">
+            <div class="form__title">Please, send us an e-mail here </div>
+            <div class="form__row">
+              <input type="text" placeholder="Your e-mail"/>
+            </div>
+            <div class="form__row">
+              <textarea placeholder="Type your question here"></textarea>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Send</button>
+            </div>
+            <div class="form__shoice">Or contact us via <a class="js_show_chat" href="#">chat</a></div>
+          </form>
+        </div>
+      </section>
+      <!-- end contacts-->
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__left"><a class="logo logo_contrast" href="/"><img src="img/logo_light.svg" alt="Compliance Engine"/><span>Compliance Engine</span></a><a href="https://www.cloudaware.com"><img src="img/cloud_cotrast.svg" alt=""/></a></div>
+        <div class="footer__center">
+          <ul class="navbar">
+            <li class="navbar__item"><a class="navbar__link" href="features.html">Features</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="resourses.html">Resources</a></li>
+          </ul>
+          <div class="footer__contact"><a href="mailto: info@cloudaware.com">info@cloudaware.com</a><a href="tel: +1(888)9973550">+ 1 (888) 997 3550</a></div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__action"><a class="btn btn_sm btn_contrast btn_signup" href="https://cloudaware.com/create-account/">Sign up</a><a class="btn btn_sm btn_contrast btn_login" href="https://www.cloudaware.com/signin/">Sign in</a><a class="btn btn_sm btn_outline btn_request" href="https://www.cloudaware.com/schedule-a-demo.html">request demo</a></div>
+        </div>
+      </div>
+      <div class="footer__copy">	&copy;Copyright 2019 CloudAware </div>
+    </footer>
+    <div id="chatlio"></div>
+    <div class="to_top"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/clamp.min.js"></script>
+    <script src="js/function.js?1.1"></script>
+    <script>
+      window._chatlio = window._chatlio||[]; 
+      !function(){ var t=document.getElementById("chatlio");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3"); 
+      n.setAttribute('data-widget-id','d989a8c1-c21b-4f6b-77b4-58aeba2036f4'); 
+      c.parentNode.insertBefore(n,c); 
+      }(); 
+    </script>
+  </body>
+</html>

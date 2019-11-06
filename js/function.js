@@ -40,6 +40,17 @@ $(document).ready(function() {
 
     checkOnResize();
 
+    $('.complete__toggle').on('click', function() {
+        $('.complete').toggleClass('open');
+    });
+
+    $('.nav__toggle').on('click', function() {
+        $('.nav').toggleClass('open');
+    });
+
+    toggleChat();
+    clampLine();
+
 });
 
 $(window).resize(function(event) {
@@ -51,9 +62,121 @@ $(window).resize(function(event) {
 	checkOnResize();
 });
 
-function checkOnResize() {
-    fontResize();
+function toggleChat() {
+    var chatLinkClickCount = 0;
+    $('.js_show_chat').on('click', function() {
+        console.log(chatLinkClickCount);
+        if (chatLinkClickCount == 0) {
+            _chatlio.show({expanded: true});
+            chatLinkClickCount++;
+        } else {
+            _chatlio.show({expanded: false});
+            chatLinkClickCount--;
+        }
+    })
 }
+
+function clampLine() {
+    // console.log('clamp');
+    $('.featuresList__text').each(function(index, element) {
+        // console.log(element);
+        // console.log($(this).text());
+        $(this).attr('data-text', $(this).text());
+        if (isXsWidth()) {
+            $clamp(element, { clamp: 3.5, useNativeClamp: false });
+            $(this).addClass('inline');
+            $(this).attr('data-short', $(this).text());
+        } else {
+            $clamp(element, { clamp: 5, useNativeClamp: false });
+            $(this).addClass('inline');
+            $(this).attr('data-short', $(this).text());
+        }
+    });
+
+    $('.featuresList__more').on('click', function() {
+        var box = $(this).parent().find('.featuresList__text'),
+        text = box.data('text'),
+        short = box.data('short');
+        if (box.hasClass('open')) {
+            // IF OPEN
+            box.text(short);
+            $(this).text('Show more');
+            box.removeClass('open');
+        } else {
+            // IF CLOSE
+            box.text(text);
+            $(this).text('Hide');
+            box.addClass('open');
+        }
+    })
+}
+
+
+function checkOnResize() {
+    // fontResize();
+    parallaxFScreen();
+    if (isXsWidth()) {
+        $('.header__action').insertBefore('.nav__bottom');
+    } else {
+        $('.header__action').appendTo('.header__right');
+    }
+}
+
+
+function parallaxFScreen() {
+
+    if (isSmWidth()) {
+        $('.fScreen__layer').removeAttr('style');
+    } else {
+        $('.fScreen').on('mousemove', function(e) {
+            var posX = e.offsetX - ($(window).width() / 4);
+            var posY = e.offsetY - ($(window).height() / 6);
+            // console.log(posX);
+            $('.fScreen__layer').each(function() {
+                var speed = $(this).data('speed') / 0.2;
+
+                $(this).css('transform', 'translateX('+(-posX/speed)+'px) translateY('+(-posY/speed)+'px)')
+            });
+        })
+    }
+}
+
+function toTop() {
+    let currentTop = $(window).scrollTop(),
+        screenHeight = $(window).height(),
+        el = $('.to_top');
+
+    $(window).scroll(function() {
+        toggleBtn();
+    });
+
+    toggleBtn();
+
+    function toggleBtn() {
+        currentTop = $(window).scrollTop();
+        if (currentTop > screenHeight) {
+            el.addClass('show');
+        } else {
+            el.removeClass('show');
+        }
+    }
+
+    el.on('click', function() {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+    })
+}
+toTop();
+
+
+function toggleTabs() {
+    $('[data-tab]').on('click', function() {
+        $('[data-tab]').removeClass('active');
+        $('[data-pane]').removeClass('active');
+        $(this).addClass('active');
+        $($(this).data('tab')).addClass('active');
+    })
+}
+toggleTabs();
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
 function stikyMenu() {
@@ -129,7 +252,7 @@ function uploadYoutubeVideo() {
             // создаем iframe со включенной опцией autoplay
             let wrapp = $(this).closest('.js_youtube'),
                 videoId = wrapp.attr('id'),
-                iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+                iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
 
             if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
 
@@ -145,6 +268,7 @@ function uploadYoutubeVideo() {
         });
     }
 };
+uploadYoutubeVideo();
 
 
 // Деление чисел на разряды Например из строки 10000 получаем 10 000

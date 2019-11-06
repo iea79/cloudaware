@@ -1,17 +1,99 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: #ccc;
-	padding: 10px 0;
-	@extend %clear_a;
+	background-color: rgba(255, 255, 255, 0.8);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 2.3em 0;
+	z-index: 100;
+
+	@media (min-width: 768px) {
+		padding: 1.8em 0;
+	}
 
 	&__content {
 		max-width: $container_width;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 2.5em;
+		padding-right: 2.5em;
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
+		@media (min-width: 768px) {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+	&__left {
+
+		@media (min-width: 768px) {
+			max-width: 23em;
+		}
+
+		@media (max-width: 767px) {
+			flex-grow: 1;
+		}
+	}
+
+	&__right {
+		flex-grow: 0;
+
+		@media (min-width: 768px) {
+			display: flex;
+			flex-grow: 1;
+			align-items: center;
+		}
+	}
+
+	&__action {
+		@media (max-width: 767px) {
+			// display: none;
+			margin: 3em -0.5em 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: 767px) {}
+
+		.btn {
+			// font-size: 1.45em;
+			// padding: 0.5em 1em;
+			@media (min-width: 768px) {
+				margin-left: 1.8em;
+
+				&_login {
+					min-width: 7.3em;
+				}
+
+				&_signup {
+					min-width: 7.3em;
+
+					&:hover {
+						background-color: darken($color_danger, 7%);
+						border-color: darken($color_danger, 7%);
+					}
+				}
+
+				&_request {
+					// min-width: 8em;
+				}
+			}
+
+			@media (max-width: 767px) {
+				margin: 0.5em;
+				font-size: 1.6em;
+				min-width: calc(50% - 1em);
+
+				&_request {
+					// min-width: 8em;
+					width: auto;
+					order: 3;
+				}
+			}
+		}
 	}
 }
 

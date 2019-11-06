@@ -1,25 +1,24 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
-$main_color: #000;
+$main_font_family: "Rubik";
+$main_color: #3e3e3e;
 $main_line_height: 1.2;
 $main_font_size: 16px;
 
-$container_width: 1200px;
+$container_width: 96em;
 
 $footer_height: 60px;
 
 // Color collection for elements
-$color_primary: #7b8287;
-$color_success: #36a566;
-$color_info: #03a9f4;
-$color_warning: #fca33e;
-$color_danger: #ff1a1a;
+$color_primary: #4A7BBD;
+$color_success: #F68B28;
+$color_info: #FFEEDF;
+$color_warning: #FEBB7D;
+$color_danger: #A83F34;
 $color_withe: #ffffff;
-
-$green: $color_success;
-$yellow: $color_warning;
-$withe: $color_withe;
+$color_light: #F3F3F3;
+$color_dark: #434343;
+$color_disabled: #b9b9b9;
 
 $el-colors: (
 	primary: $color_primary, // color for .element__primary
@@ -40,8 +39,8 @@ $grid_padding: 20px;
 // Input color
 $input_color: $main_color;
 $input_bg_color: #fff;
-$input_border_color: #ddd;
-$input_placeholder_color: #ddd;
+$input_border_color: #c4c4c4;
+$input_placeholder_color: #E6E6E6;
 
 // Input hover color
 $input_hover_color: #fff;
@@ -68,10 +67,10 @@ $input_error_border_color: red;
 $input_error_placeholder_color: red;
 
 // Button variables
-$btn_default_bg_color: #ddd;
-$btn_default_text_color: $main_color;
+$btn_default_bg_color: $color_danger;
+$btn_default_text_color: $color_withe;
 $btn_contrast_text_color: $color_withe;
-$btn_default_bg_color_hover: #ccc;
+$btn_default_bg_color_hover: $color_success;
 
 /* Breakpoints */
 $breakpoint-small: 480px !default;

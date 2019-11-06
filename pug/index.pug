@@ -1,40 +1,188 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+extends template.pug
+block variables
+    -var bodyClass = 'home';
 
-        link(rel="stylesheet", type="text/css", href="css/style.css")
-    body
-        header.header
-            .header__content
-                .header__left
-                    a.logo(href="/")
-                        img(src="img/logo.png", alt="alt")
-                nav.header__right
-                    ul.navbar
-                        - var n = 0;
-                        -for (i=0; i<5; i++) {
-                            li.navbar__item
-                                a.navbar__link(href="#") Page #{i}
-                        -};
-                        //- while n < 6
-                        //-     li.navbar__item
-                        //-         a.navbar__link(href="#")= "Page " + n++
+block content
+    // begin fScreen
+    section#home.fScreen
+        .fScreen__layer.fScreen__layer_1(data-speed="45")
+        .fScreen__layer.fScreen__layer_2(data-speed="25")
+        .fScreen__layer.fScreen__layer_3(data-speed="10")
+        .container_center
+            .fScreen__content
+                .fScreen__logo
+                    a(href="https://www.cloudaware.com")
+                        img(src="img/cloud.svg", alt="CloudAware")
+                h2.section__title Compliance Engine
+                .fScreen__text 450+ policies to identify spending waste and security holes. Workflow templates to route, escalate and fix fast.
 
-        main.main_content
+                .fScreen__action
+                    a.btn.btn_contrast(href="https://cloudaware.com/create-account/") Try now
+
+    // end fScreen
+
+    // begin turnkey
+    section#turnkey.turnkey
+        .container_center
+            h2.section__title Turnkey Solution with Process Templates
+            .turnkey__content
+                .turnkey__left
+                    //- .turnkey__title CIS
+                    //- .turnkey__sub scan date: sep 2, 2019 3:58 am pdt
+                    //- .turnkey__count
+                    //-     .turnkey__item
+                    //-         .turnkey__number 222
+                    //-         .turnkey__label benchmarks checks
+                    //-     .turnkey__item
+                    //-         .turnkey__number 155
+                    //-         .turnkey__label passed
+                    //-     .turnkey__item
+                    //-         .turnkey__number 67
+                    //-         .turnkey__label failed
+                    img(src="img/cis.jpg", alt="")
+                .turnkey__right
+                    img(src="img/turnkey.jpg", alt="")
+
+    // end turnkey
+
+    // begin complete
+    section#complete-list.complete.line_withe
+        .complete__top
+            h2.section__title Complete list of compliance libraries
+            .complete__toggle
+                img(src="img/duble-arrow.png", alt="")
+
+        .line_light.completeList__wrapper
+            // begin container_center
             .container_center
+                .completeList
+                    -var complete = ['pci', 'hpaa', 'gdpr', 'aicpa', 'iso', 'cis', 'nist', 'nist-2', 'fedramp', 'ccm'];
+                    each item in complete
+                        .completeList__item
+                            img(src="img/"+item+".png", alt="")
 
-                .grid
-                    .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.
-                    .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!
-                    .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?
 
-        footer.footer
-            .container_center
-                p
-                | &copy; 2016 |
-                i.fa.fa-github(aria-hidden='true') &nbsp;
-                a(href='#') View Source
+            // end container_center
+
+    // end complete
+
+    // begin violation
+    section#violation.violation.line_withe
+        .container_center
+            h2.section__title.text_center VIOLation life cycle management
+            .section__sub.text_center Optimize your compliance implementation
+
+            .violation__content
+                .violation__row
+                    .violation__img
+                        img(src="img/violation-1.jpg", alt="Violation Routing")
+                    .violation__text
+                        .violation__title Violation Routing
+                        .violation__descr Compliance engine routes and escalates violations to specific teams and individuals. Using tags and other data from CMDB, compliance engine will identify security and compliance contacts for every configuration item involved in a violation. Assigning remediation tasks to the most appropriate team is the first step in pursuing expedited resolution. Using violation routing feature, SecDevOps teams can reduce their workloads by automatically forwarding remediation requests directly to the account and application owners. 
+                .violation__row
+                    .violation__img
+                        img(src="img/violation-2.jpg", alt="Enforcement  Handling")
+                    .violation__text
+                        .violation__title Enforcement  Handling
+                        .violation__descr Compliance engine is designed to allow those responsible for remediation to request an appeal from cloud security and compliance operations. Using Cloudaware CMDB workflows, appeal request can be escalated to multiple stakeholders. Ignoring violations even for legitimate reasons creates poor security governance culture where subsequently legitimate violations are likely be ignored at some point. By dealing with legitimate violations using a process driven approach where no violation remains ignored, security teams not only protect cloud infrastructure but also nurture culture of responsibility and transparency.
+
+                .violation__row
+                    .violation__img
+                        img(src="img/violation-3.jpg", alt="Approval Workflow")
+                    .violation__text
+                        .violation__title Approval Workflow
+                        .violation__descr Approval workflows allow compliance engine administrators to create automated processes to handle appeal requests in response to compliance violations. Compliance engine supports advanced approval workflows where multiple concurrent stakeholders are required for a sign off as well as staggered processes where various department representatives will sign off sequentially. Cloudaware approval workflows feature is designed to avoid situations where violations are in a dead end state and are ignored.
+                .violation__row
+                    .violation__img
+                        img(src="img/violation-4.jpg", alt="Compliance Performance")
+                    .violation__text
+                        .violation__title Compliance Performance
+                        .violation__descr Compliance engine provides insightful indicators about how various teams are handling compliance violations. Besides standard metrics, such as violation volume over time and mean time to repair, compliance engine dashboards show which teams are overloaded with violations and will not be able to resolve violations within a pre-configured timeline. Customers are able to compare their statistics, such as mean time to repair, exception rate and others against statistical average of other Cloudaware customers. This feature helps customers to establish a point of reference of how they are performing relative to the industry standard and whether their processes require an improvement.
+
+        .violation__action
+            a.btn(href="https://cloudaware.com/create-account/") Try now
+
+    // end violation
+
+    // begin feature
+    section#feature.feature.line_withe
+        .container_center
+            h2.section__title.text_center Additional Features
+
+            .feature__list
+                a.feature__item(href="#")
+                    .feature__img
+                        img(src="img/feature-1.png", alt="Multi-Сloud: AWS, GCP, Azure")
+                    .feature__name Multi-Cloud: <br>AWS, GCP, Azure
+                a.feature__item(href="#")
+                    .feature__img
+                        img(src="img/feature-2.png", alt="Supports JIRA and ServiceNow")
+                    .feature__name Supports JIRA <br>and ServiceNow
+                a.feature__item(href="#")
+                    .feature__img
+                        img(src="img/feature-3.png", alt="Plan Remediation Activities")
+                    .feature__name Plan Remediation <br>Activities
+                a.feature__item(href="#")
+                    .feature__img
+                        img(src="img/feature-4.png", alt="Write your own policies")
+                    .feature__name Write your <br>own policies
+            .feature__action
+                a.btn(href="#") More
+
+    // end feature
+
+    // begin resources
+    section#resources.resources
+        .container_center
+            h2.section__title.text_center Resources
+            .resources__list
+                a.resources__item(href="#")
+                    .resources__img
+                        img(src="img/resources-1.jpg", alt="")
+                    .resources__descr
+                        .resources__name Datasheet
+                        .resources__short Download Complaince Engine datasheet
+                        .resources__more Show more
+                a.resources__item(href="#")
+                    .resources__img
+                        img(src="img/resources-2.jpg", alt="")
+                    .resources__descr
+                        .resources__name Case Studies
+                        .resources__short Visit our customer's case studies.
+                        .resources__more Show more
+                a.resources__item(href="#")
+                    .resources__img
+                        img(src="img/resources-3.jpg", alt="")
+                    .resources__descr
+                        .resources__name Blog
+                        .resources__short Take a tour of Compliance Engine Blog articles.
+                        .resources__more Show more
+                a.resources__item(href="#")
+                    .resources__img
+                        img(src="img/resources-4.jpg", alt="")
+                    .resources__descr
+                        .resources__name Videos
+                        .resources__short Check out our short YouTube videos about Compliance Engine.
+                        .resources__more Show more
+            .resources__action
+                a.btn(href="resourses.html") More
+
+    // end resources
+
+    // begin contacts
+    section#contacts.contacts
+        .container_center
+            h2.section__title.text_center still have questions left?
+
+            form.form(action="#" method="post")
+                .form__title Please, send us an e-mail here 
+                .form__row
+                    input(type="text", placeholder="Your e-mail")
+                .form__row
+                    textarea(placeholder="Type your question here")
+                .form__action
+                    button.btn(type="submit") Send
+                .form__shoice Or contact us via 
+                    a.js_show_chat(href="#") chat
+
+    // end contacts

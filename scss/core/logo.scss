@@ -1,0 +1,45 @@
+.logo {
+    text-decoration: none;
+    color: $color_danger;
+    display: flex;
+    align-items: center;
+
+    &_contrast {
+        color: $color_withe;
+
+        @media (min-width: 768px) {
+            margin-bottom: -0.6em;
+            margin-left: -3.8em;
+        }
+
+        img {
+            width: 3em;
+        }
+
+        + a {
+            max-width: 10em;
+        }
+    }
+
+    img {
+        flex: none;
+        width: 2.8em;
+        margin-right: 0.8em;
+
+        @media (min-width: 768px) {
+            width: 3.1em;
+
+        }
+    }
+
+    span {
+        font-size: 1.9em;
+        font-weight: 700;
+        line-height: 0.97;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            font-size: 1.65em;
+        }
+    }
+}

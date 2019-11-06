@@ -1,0 +1,82 @@
+-var version = '1.1';
+block variables
+    -var bodyClass = '';
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Compliance Engine - CloudAware
+
+        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+    body(class= bodyClass)
+        header.header
+            .header__content
+                .header__left
+                    a.logo(href="/")
+                        img(src="img/logo.svg", alt="Compliance Engine")
+                        span Compliance Engine
+                .header__right
+                    .nav__toggle
+                        img(src="img/menu.svg", alt="")
+                    nav.nav
+                        .nav__toggle
+                            img(src="img/close.svg", alt="Close menu")
+                        ul.navbar
+                            li.navbar__item
+                                a.navbar__link(href="features.html") Features
+                            li.navbar__item
+                                a.navbar__link(href="resourses.html") Resources
+                        .mobile.nav__bottom
+                            .nav__label Visit our main website
+                            a(href="https://www.cloudaware.com/")
+                                img(src="img/cloud.svg", alt="CloudAware")
+                    .header__action
+                        a.btn.btn_sm.btn_outline.btn_request(href="https://www.cloudaware.com/schedule-a-demo.html") request demo
+                        a.btn.btn_sm.btn_signup(href="https://cloudaware.com/create-account/") Sign up
+                        a.btn.btn_sm.btn_success.btn_login(href="https://www.cloudaware.com/signin/") Sign in
+
+        main.main_content
+            block content
+
+        footer.footer
+            .footer__content
+                .footer__left
+                    a.logo.logo_contrast(href="/")
+                        img(src="img/logo_light.svg", alt="Compliance Engine")
+                        span Compliance Engine
+                    a(href="https://www.cloudaware.com")
+                        img(src="img/cloud_cotrast.svg", alt="")
+                .footer__center
+                    ul.navbar
+                        li.navbar__item
+                            a.navbar__link(href="features.html") Features
+                        li.navbar__item
+                            a.navbar__link(href="resourses.html") Resources
+                    .footer__contact
+                        a(href="mailto: info@cloudaware.com") info@cloudaware.com
+                        a(href="tel: +1(888)9973550") + 1 (888) 997 3550
+                .footer__right
+                    .footer__action
+                        a.btn.btn_sm.btn_contrast.btn_signup(href="https://cloudaware.com/create-account/") Sign up
+                        a.btn.btn_sm.btn_contrast.btn_login(href="https://www.cloudaware.com/signin/") Sign in
+                        a.btn.btn_sm.btn_outline.btn_request(href="https://www.cloudaware.com/schedule-a-demo.html") request demo
+
+            .footer__copy 	&copy;Copyright 2019 CloudAware 
+
+        #chatlio
+
+        .to_top
+
+        script(src="js/jquery.js")
+        script(src="js/modal.js")
+        script(src="js/clamp.min.js")
+        script(src="js/function.js?"+version+"")
+
+        script. 
+            window._chatlio = window._chatlio||[]; 
+            !function(){ var t=document.getElementById("chatlio");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3"); 
+            n.setAttribute('data-widget-id','d989a8c1-c21b-4f6b-77b4-58aeba2036f4'); 
+            c.parentNode.insertBefore(n,c); 
+            }(); 

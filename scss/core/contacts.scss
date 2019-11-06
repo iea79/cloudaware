@@ -1,0 +1,40 @@
+.contacts {
+    background: $color_warning;
+    padding: 6.5em 0 6em;
+
+    @media (min-width: 768px) {
+        padding: 9.5em 0 3em;
+        background-repeat: no-repeat;
+        background-image: url("../img/contact-left.svg"), url("../img/contact-right.svg");
+        background-position: left center, right center;
+        background-size: 14.8em, 14.8em;
+    }
+
+    @media (min-width: 992px) {
+        background-size: 17.2em, 17.2em;
+        padding: 10.7em 0 3em;
+    }
+
+    .section__title {
+        color: $color_withe;
+
+        @media (max-width: 767px) {
+            margin-bottom: 1.3em;
+        }
+    }
+
+    .form {
+        margin: 2.2em auto;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            max-width: 55.5em;
+            margin: 2.3em auto;
+        }
+
+        @media (min-width: 992px) {
+            margin: 3.3em auto;
+            max-width: 47em;
+        }
+    }
+}
