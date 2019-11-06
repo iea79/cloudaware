@@ -11,7 +11,7 @@ block content
                 li
                     a(href="/") Resources
 
-            h1.page__title.text_contrast Resources
+            h1.page__title Resources
 
             .resourcesList__tabs
                 .resourcesList__tab.active(data-tab="#datasheet") Datasheet
@@ -61,7 +61,7 @@ block content
             .resourcesList__pane#blog(data-pane="")
                 .resourcesBlog
                     each val in ['','','','','','','','','','','','']
-                        a.resourcesBlog__item(href="#")
+                        a.resourcesBlog__item(href="article.html")
                             .resourcesBlog__img(style="background-image: url()")
                             .resourcesBlog__name Article 
                             .resourcesBlog__text Aliquam viverra in viverra ut ornare suspendisse nibh nibh facilisi nisi dolor, urna, vel blandit sit.
@@ -93,3 +93,14 @@ block content
                             .form__action
                                 button.btn(type="submit") Send
         // End modal getCase
+
+        // Button trigger modal showVideo
+        //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#showVideo") Click to open modal
+        // Begin Modal showVideo
+        .modal.fade.showVideo#showVideo
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="modal-close" data-dismiss="modal")
+                    .video__wrapper
+                        #player
+        // End modal showVideo

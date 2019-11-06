@@ -26,7 +26,7 @@ block content
         .container_center
             h2.section__title Turnkey Solution with Process Templates
             .turnkey__content
-                .turnkey__left
+                .turnkey__left.animate(data-delay="100")
                     //- .turnkey__title CIS
                     //- .turnkey__sub scan date: sep 2, 2019 3:58 am pdt
                     //- .turnkey__count
@@ -40,7 +40,7 @@ block content
                     //-         .turnkey__number 67
                     //-         .turnkey__label failed
                     img(src="img/cis.jpg", alt="")
-                .turnkey__right
+                .turnkey__right.animate(data-delay="200")
                     img(src="img/turnkey.jpg", alt="")
 
     // end turnkey
@@ -73,26 +73,26 @@ block content
             .section__sub.text_center Optimize your compliance implementation
 
             .violation__content
-                .violation__row
+                .violation__row.animate
                     .violation__img
                         img(src="img/violation-1.jpg", alt="Violation Routing")
                     .violation__text
                         .violation__title Violation Routing
                         .violation__descr Compliance engine routes and escalates violations to specific teams and individuals. Using tags and other data from CMDB, compliance engine will identify security and compliance contacts for every configuration item involved in a violation. Assigning remediation tasks to the most appropriate team is the first step in pursuing expedited resolution. Using violation routing feature, SecDevOps teams can reduce their workloads by automatically forwarding remediation requests directly to the account and application owners. 
-                .violation__row
+                .violation__row.animate
                     .violation__img
                         img(src="img/violation-2.jpg", alt="Enforcement  Handling")
                     .violation__text
                         .violation__title Enforcement  Handling
                         .violation__descr Compliance engine is designed to allow those responsible for remediation to request an appeal from cloud security and compliance operations. Using Cloudaware CMDB workflows, appeal request can be escalated to multiple stakeholders. Ignoring violations even for legitimate reasons creates poor security governance culture where subsequently legitimate violations are likely be ignored at some point. By dealing with legitimate violations using a process driven approach where no violation remains ignored, security teams not only protect cloud infrastructure but also nurture culture of responsibility and transparency.
 
-                .violation__row
+                .violation__row.animate
                     .violation__img
                         img(src="img/violation-3.jpg", alt="Approval Workflow")
                     .violation__text
                         .violation__title Approval Workflow
                         .violation__descr Approval workflows allow compliance engine administrators to create automated processes to handle appeal requests in response to compliance violations. Compliance engine supports advanced approval workflows where multiple concurrent stakeholders are required for a sign off as well as staggered processes where various department representatives will sign off sequentially. Cloudaware approval workflows feature is designed to avoid situations where violations are in a dead end state and are ignored.
-                .violation__row
+                .violation__row.animate
                     .violation__img
                         img(src="img/violation-4.jpg", alt="Compliance Performance")
                     .violation__text
@@ -110,19 +110,19 @@ block content
             h2.section__title.text_center Additional Features
 
             .feature__list
-                a.feature__item(href="#")
+                a.feature__item.animate(href="#" data-delay="0")
                     .feature__img
-                        img(src="img/feature-1.png", alt="Multi-Сloud: AWS, GCP, Azure")
+                        img(src="img/feature-1.png", alt="Multi-ะกloud: AWS, GCP, Azure")
                     .feature__name Multi-Cloud: <br>AWS, GCP, Azure
-                a.feature__item(href="#")
+                a.feature__item.animate(href="#" data-delay="100")
                     .feature__img
                         img(src="img/feature-2.png", alt="Supports JIRA and ServiceNow")
                     .feature__name Supports JIRA <br>and ServiceNow
-                a.feature__item(href="#")
+                a.feature__item.animate(href="#" data-delay="200")
                     .feature__img
                         img(src="img/feature-3.png", alt="Plan Remediation Activities")
                     .feature__name Plan Remediation <br>Activities
-                a.feature__item(href="#")
+                a.feature__item.animate(href="#" data-delay="300")
                     .feature__img
                         img(src="img/feature-4.png", alt="Write your own policies")
                     .feature__name Write your <br>own policies
@@ -136,28 +136,28 @@ block content
         .container_center
             h2.section__title.text_center Resources
             .resources__list
-                a.resources__item(href="#")
+                a.resources__item.animate(href="#" data-delay="0")
                     .resources__img
                         img(src="img/resources-1.jpg", alt="")
                     .resources__descr
                         .resources__name Datasheet
                         .resources__short Download Complaince Engine datasheet
                         .resources__more Show more
-                a.resources__item(href="#")
+                a.resources__item.animate(href="#" data-delay="100")
                     .resources__img
                         img(src="img/resources-2.jpg", alt="")
                     .resources__descr
                         .resources__name Case Studies
                         .resources__short Visit our customer's case studies.
                         .resources__more Show more
-                a.resources__item(href="#")
+                a.resources__item.animate(href="#" data-delay="200")
                     .resources__img
                         img(src="img/resources-3.jpg", alt="")
                     .resources__descr
                         .resources__name Blog
                         .resources__short Take a tour of Compliance Engine Blog articles.
                         .resources__more Show more
-                a.resources__item(href="#")
+                a.resources__item.animate(href="#" data-delay="300")
                     .resources__img
                         img(src="img/resources-4.jpg", alt="")
                     .resources__descr
@@ -174,7 +174,7 @@ block content
         .container_center
             h2.section__title.text_center still have questions left?
 
-            form.form(action="#" method="post")
+            form.form.animate(action="#" method="post")
                 .form__title Please, send us an e-mail here 
                 .form__row
                     input(type="text", placeholder="Your e-mail")

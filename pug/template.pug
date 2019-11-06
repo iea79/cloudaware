@@ -1,4 +1,4 @@
--var version = '1.1';
+-var version = '1.3';
 block variables
     -var bodyClass = '';
 <!DOCTYPE html>
@@ -9,6 +9,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Compliance Engine - CloudAware
 
+        link(rel="stylesheet", type="text/css", href="css/animate.css")
         link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
     body(class= bodyClass)
         header.header
@@ -69,14 +70,15 @@ html(lang="en")
 
         .to_top
 
-        script(src="js/jquery.js")
-        script(src="js/modal.js")
-        script(src="js/clamp.min.js")
-        script(src="js/function.js?"+version+"")
+    script(src="js/jquery.js")
+    script(src="js/modal.js")
+    script(src="js/jquery.viewportchecker.js")
+    script(src="js/clamp.min.js")
+    script(src="js/function.js?"+version+"")
 
-        script. 
-            window._chatlio = window._chatlio||[]; 
-            !function(){ var t=document.getElementById("chatlio");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3"); 
-            n.setAttribute('data-widget-id','d989a8c1-c21b-4f6b-77b4-58aeba2036f4'); 
-            c.parentNode.insertBefore(n,c); 
-            }(); 
+    script. 
+        window._chatlio = window._chatlio||[]; 
+        !function(){ var t=document.getElementById("chatlio");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3"); 
+        n.setAttribute('data-widget-id','d989a8c1-c21b-4f6b-77b4-58aeba2036f4'); 
+        c.parentNode.insertBefore(n,c); 
+        }(); 
