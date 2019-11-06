@@ -69,11 +69,12 @@ block content
 
             .resourcesList__pane#video(data-pane="")
                 .resourcesVideo
-                    each val in ['','','','','','']
-                        .resourcesVideo__item
-                            .resourcesVideo__wrap.video__wrapper.js_youtube#1vmDYpMp0uc
-                            .resourcesVideo__name Video
-                            .resourcesVideo__text Aliquam viverra in viverra ut ornare suspendisse nibh nibh facilisi nisi dolor, urna, vel blandit sit.
+                    each val, i in ['','','','','','']
+                        .resourcesVideo__item#1vmDYpMp0uc
+                            .resourcesVideo__wrap.video__wrapper.js_youtube
+                            .resourcesVideo__descr
+                                .resourcesVideo__name= 'Video '+(i+1)
+                                .resourcesVideo__text Aliquam viverra in viverra ut ornare suspendisse nibh nibh facilisi nisi dolor, urna, vel blandit sit.
                             a.resourcesVideo__more(href="#") Show more
 
 
@@ -103,4 +104,5 @@ block content
                     a(href="#" class="modal-close" data-dismiss="modal")
                     .video__wrapper
                         #player
+                    .showVideo__descr
         // End modal showVideo

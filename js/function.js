@@ -260,18 +260,20 @@ function uploadYoutubeVideo() {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         $(".js_youtube").each(function () {
+            var id = $(this).closest('.resourcesVideo__item').attr('id');
             // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-            $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+            $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + id + '/sddefault.jpg)');
 
             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
             $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
 
         });
 
-        $('body').on('click', '.video__play', function () {
+        $('body').on('click', '.resourcesVideo__item', function () {
             console.log('video start');
-            var wrapp = $(this).closest('.video__wrapper'),
-            videoId = wrapp.attr('id');
+            // var wrapp = $(this).closest('.resourcesVideo__item'),
+            var videoId = $(this).attr('id');
+            var descr = $(this).find('.resourcesVideo__descr').html();
 
             player = new YT.Player('player', {
                 videoId: videoId,
@@ -280,7 +282,7 @@ function uploadYoutubeVideo() {
                     'onReady': onPlayerReady,
                 }
             });
-
+            modal.find('.showVideo__descr').html(descr);
             modal.modal('show');
 
             console.log(player);
@@ -294,6 +296,7 @@ function uploadYoutubeVideo() {
         modal.on('hide.bs.modal', function() {
             $(this).find('iframe').remove();
             $(this).find('.video__wrapper').append('<div id="player" />');
+            modal.find('.showVideo__descr').html('');
         })
     }
 };

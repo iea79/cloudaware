@@ -122,6 +122,29 @@
     }
 }
 
+.showVideo {
+    .modal-dialog {
+        max-width: 91em;
+    }
+
+    .modal-content {
+        padding: 2em;
+
+        @media (min-width: 768px) {
+            padding: 3em;
+        }
+    }
+
+    &__descr {
+        padding-top: 2em;
+        text-align: left;
+
+        @media (min-width: 768px) {
+            // padding-top: 2em;
+        }
+    }
+}
+
 .article {
     margin-bottom: 6.2em;
 
