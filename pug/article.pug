@@ -1,0 +1,40 @@
+extends template.pug
+block variables
+    -var bodyClass = '';
+
+block content
+    .pageTop
+        .container_center
+            ul.breadcrumb
+                li
+                    a(href="/") Home
+                li
+                    a(href="resourses.html") Resources
+                li
+                    a(href="/") Case Study №1
+
+            h1.page__title Case Study №1
+
+    .container_center
+        .article
+            .article__img(style="background-image: url(img/article.jpg)")
+            .article__title Some heading to explain shortly what’s going on
+            .article__text
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, aliquam nulla amet, vel tempor odio vel. Neque sed risus sed elementum aliquet. Amet, a at praesent faucibus sagittis sit. Risus commodo, sed adipiscing semper vestibulum, aliquet non mattis. Consequat amet, purus non condimentum viverra morbi at massa tortor. Sed lorem ac vel vulputate sed arcu. Vitae in sem adipiscing dolor, vitae amet, tempor sagittis. 
+
+                p Mauris sit velit placerat eget pulvinar cursus porta morbi. Mauris facilisis elit cursus dui ac mattis lacus, amet dolor. Commodo eget quis et, in non vitae. Pellentesque nec sed arcu mollis viverra morbi molestie tristique. Risus, eu ullamcorper dui vestibulum id porta mauris lectus morbi. Lacus ullamcorper sit lorem egestas etiam libero, vel urna sit. 
+
+                p Quam a eget feugiat blandit pretium quisque aenean. A, mauris quis lectus velit quisque. Nunc auctor nunc quis vitae malesuada placerat. Vitae, sit donec faucibus laoreet odio euismod. Consequat tortor, sit sem mauris, sed feugiat ac morbi. Et ultrices lectus faucibus urna a ullamcorper pulvinar. Ipsum, at egestas adipiscing nec placerat neque feugiat at.
+
+            .article__date 16.08.2019
+
+        .articleList
+            .articleList__label You may also be interested in:
+
+            .articleList__content
+                each value in ['Case study №5','Case study №6','Case study №7','Case study №8',]
+                    a.articleList__item(href="#")
+                        .articleList__img(style="background-image: url()")
+                        .articleList__name= value
+                        .articleList__text Aliquam viverra in viverra ut ornare suspendisse nibh nibh facilisi nisi dolor, urna, vel blandit sit.
+                        .articleList__more Show more

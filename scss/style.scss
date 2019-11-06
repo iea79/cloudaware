@@ -6,8 +6,7 @@
  *
  */
 @import 'mixins/mixin'; // Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900); // Mixin for include fonts
-@include font-face("ArialMT", 'fonts/CenturyGothic', normal, normal);
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap&subset=cyrillic');
 // Import files
 @import 'variables/variables';
 @import 'core/reset';
@@ -22,3 +21,235 @@
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
+@import 'core/line';
+@import 'core/logo';
+@import 'core/section';
+@import 'core/fScreen';
+@import 'core/turnkey';
+@import 'core/violation';
+@import 'core/complete';
+@import 'core/completeList';
+@import 'core/contacts';
+@import 'core/to_top';
+@import 'core/resources';
+@import 'core/resourcesItem';
+@import 'core/resourcesList';
+@import 'core/resourcesBlog';
+@import 'core/resourcesVideo';
+@import 'core/feature';
+@import 'core/featuresList';
+@import 'core/page';
+
+@import 'vendor/modal';
+
+.form {
+    &__title {
+        font-size: 2.1em;
+        font-weight: 400;
+        margin-bottom: 1.4em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 1em;
+
+        }
+
+        a {
+            color: $main_color;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__row {}
+
+    &__action {
+        .btn {}
+    }
+
+    &__shoice {
+        font-size: 2.2em;
+        margin-top: 1.8em;
+
+        @media (min-width: 768px) {
+            margin-top: 1.3em;
+        }
+
+        a {
+            color: $main_color;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.desktop {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mobile {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.getCase {
+    .form {
+        max-width: 42em;
+        margin: auto auto 2em;
+
+        input {
+            text-align: center;
+        }
+    }
+}
+
+.article {
+    margin-bottom: 6.2em;
+
+    &__img {
+        margin-bottom: 5em;
+        border-radius: 0.313em;
+        overflow: hidden;
+        background: #ffc086 center no-repeat;
+        background-size: cover;
+        height: 30em;
+
+        @media (min-width: 768px) {
+            height: 36.9em;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 2.75em;
+        margin-bottom: 1.95em;
+        font-weight: 500;
+        letter-spacing: 0.001em;
+
+        @media (max-width: 767px) {
+            // text-align: center;
+        }
+    }
+
+    &__text {
+        font-size: 2.15em;
+
+        p {
+            margin: 2em 0;
+        }
+    }
+
+    &__date {
+        font-size: 2.25em;
+        // margin-top: 1.7em;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border: 0.09em solid #BBBBBB;
+        max-width: 35.7%;
+        margin-top: 2.5em;
+    }
+}
+
+.articleList {
+    margin-bottom: 7.6em;
+
+    &__label {
+        font-weight: 500;
+        font-size: 2.25em;
+        margin-bottom: 1.5em;
+    }
+
+    &__content {
+        display: flex;
+        margin: 0 -1em;
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        width: calc(50% - 2em);
+        box-shadow: 0.25em 0.5em 0.625em rgba(0, 0, 0, 0.16);
+        background-color: $color_withe;
+        border-radius: 0.313em;
+        padding: 1.8em 1.8em 1.4em;
+        margin: 0 1em 3em;
+        text-decoration: none;
+        color: $color_dark;
+        position: relative;
+        text-decoration: none;
+        top: 0;
+        transition: top 0.3s;
+
+        @media (min-width: 768px) {
+            width: calc(25% - 2em);
+            margin: 0 1em 5.1em;
+
+            &:hover {
+                top: -1em;
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 0.313em;
+        height: 17.65em;
+        background: #ffc086 center no-repeat;
+        background-size: cover;
+        margin-bottom: 1.6em;
+        overflow: hidden;
+    }
+
+    &__name {
+        font-size: 2.3em;
+        font-weight: 500;
+        margin-bottom: 0.1em;
+    }
+
+    &__text {
+        font-size: 1.8em;
+        margin-bottom: 0.2em;
+        line-height: 1.1;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+        }
+    }
+
+    &__more {
+        font-size: 1.8em;
+        color: $color_success;
+        // margin-bottom: .1em;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+        }
+    }
+
+}

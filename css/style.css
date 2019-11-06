@@ -6,7 +6,7 @@
  *
  */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900);
-.header:after, .form:after, .form__row:after {
+.header:after {
   content: '';
   display: table;
   clear: both; }
@@ -445,13 +445,23 @@ template {
   display: none; }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  font-size: calc(0.0165 * 100vw + 1px);
+  background-color: #f3f3f3; }
+  @media (min-width: 768px) {
+    body {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: calc(0.008 * 100vw + 1px); } }
+  @media (min-width: 992px) {
+    body {
+      font-size: calc(0.006333333 * 100vw + 1px); } }
 
 .wrapper {
   font-size: 16px; }
@@ -460,14 +470,58 @@ body {
  ----------------------------------------------------------------------------- */
 .main_content {
   -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .container_center {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto; }
+  @media (min-width: 768px) {
+    .container_center {
+      padding: 0 1em; } }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 0.3em;
+  color: #ff1a1a;
+  letter-spacing: 0.001em;
+  line-height: 1.06; }
+
+h1 {
+  font-size: 6.25em;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+h2 {
+  font-size: 3.4em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  letter-spacing: 0.001em; }
+
+h3 {
+  font-size: 2.875em;
+  font-weight: 500; }
+
+h4 {
+  font-size: 2.5em;
+  font-weight: 500; }
+
+h5 {
+  font-size: 1.875em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.038em; }
+
+.text_center {
+  text-align: center; }
 
 /* Header
  ----------------------------------------------------------------------------- */
@@ -480,9 +534,11 @@ body {
     padding-right: 15px;
     margin: auto;
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
 
@@ -499,6 +555,7 @@ body {
   padding: 0;
   list-style: none;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
   .navbar__item {
@@ -512,123 +569,176 @@ body {
   background: #BFF08E; }
 
 .form__row {
-  margin-bottom: 15px; }
+  margin-bottom: 1.1em; }
+  .form__row .btn,
   .form__row input:not([type]),
-  .form__row input[type=text],
-  .form__row input[type=password],
+  .form__row input[type=datetime],
   .form__row input[type=email],
-  .form__row input[type=url],
+  .form__row input[type=number],
+  .form__row input[type=password],
   .form__row input[type=search],
   .form__row input[type=tel],
-  .form__row input[type=number],
-  .form__row input[type=datetime],
-  .form__row textarea,
-  .form__row .btn {
+  .form__row input[type=text],
+  .form__row input[type=url],
+  .form__row textarea {
     width: 100%; }
   .form__row textarea {
     max-width: 100%;
     max-width: 100%;
-    min-height: 15px; }
+    min-height: 6.6em;
+    resize: vertical; }
+    @media (min-width: 768px) {
+      .form__row textarea {
+        min-height: 9.8em; } }
+
+.form__action {
+  margin-top: 3.1em; }
+  .form__action .btn {
+    min-width: 7.3em; }
 
 input:not([type]),
-input[type=text],
-input[type=password],
+input[type=datetime],
 input[type=email],
-input[type=url],
+input[type=number],
+input[type=password],
 input[type=search],
 input[type=tel],
-input[type=number],
-input[type=datetime],
+input[type=text],
+input[type=url],
 textarea {
   background-color: #fff;
   border: 1px solid #ddd;
-  padding: 6px 15px;
+  padding: 0.9em 1em;
   outline: none;
-  font-size: 16px;
+  font-size: 1.7em;
   font-weight: 300;
   font-family: "Open Sans";
-  border-radius: 5px;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s; }
+  border-radius: 0.3em;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
   input:not([type]):hover,
-  input[type=text]:hover,
-  input[type=password]:hover,
+  input[type=datetime]:hover,
   input[type=email]:hover,
-  input[type=url]:hover,
+  input[type=number]:hover,
+  input[type=password]:hover,
   input[type=search]:hover,
   input[type=tel]:hover,
-  input[type=number]:hover,
-  input[type=datetime]:hover,
+  input[type=text]:hover,
+  input[type=url]:hover,
   textarea:hover {
     border: 1px solid #ddd;
     background-color: #fff; }
   input:not([type]):focus,
-  input[type=text]:focus,
-  input[type=password]:focus,
+  input[type=datetime]:focus,
   input[type=email]:focus,
-  input[type=url]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
   input[type=search]:focus,
   input[type=tel]:focus,
-  input[type=number]:focus,
-  input[type=datetime]:focus,
+  input[type=text]:focus,
+  input[type=url]:focus,
   textarea:focus {
     border: 1px solid #ddd;
     background-color: #fff; }
+    input:not([type]):focus::-webkit-input-placeholder,
+    input[type=datetime]:focus::-webkit-input-placeholder,
+    input[type=email]:focus::-webkit-input-placeholder,
+    input[type=number]:focus::-webkit-input-placeholder,
+    input[type=password]:focus::-webkit-input-placeholder,
+    input[type=search]:focus::-webkit-input-placeholder,
+    input[type=tel]:focus::-webkit-input-placeholder,
+    input[type=text]:focus::-webkit-input-placeholder,
+    input[type=url]:focus::-webkit-input-placeholder,
+    textarea:focus::-webkit-input-placeholder {
+      color: #ffffff; }
+    input:not([type]):focus:-moz-placeholder,
+    input[type=datetime]:focus:-moz-placeholder,
+    input[type=email]:focus:-moz-placeholder,
+    input[type=number]:focus:-moz-placeholder,
+    input[type=password]:focus:-moz-placeholder,
+    input[type=search]:focus:-moz-placeholder,
+    input[type=tel]:focus:-moz-placeholder,
+    input[type=text]:focus:-moz-placeholder,
+    input[type=url]:focus:-moz-placeholder,
+    textarea:focus:-moz-placeholder {
+      color: #ffffff; }
+    input:not([type]):focus::-moz-placeholder,
+    input[type=datetime]:focus::-moz-placeholder,
+    input[type=email]:focus::-moz-placeholder,
+    input[type=number]:focus::-moz-placeholder,
+    input[type=password]:focus::-moz-placeholder,
+    input[type=search]:focus::-moz-placeholder,
+    input[type=tel]:focus::-moz-placeholder,
+    input[type=text]:focus::-moz-placeholder,
+    input[type=url]:focus::-moz-placeholder,
+    textarea:focus::-moz-placeholder {
+      color: #ffffff; }
+    input:not([type]):focus:-ms-input-placeholder,
+    input[type=datetime]:focus:-ms-input-placeholder,
+    input[type=email]:focus:-ms-input-placeholder,
+    input[type=number]:focus:-ms-input-placeholder,
+    input[type=password]:focus:-ms-input-placeholder,
+    input[type=search]:focus:-ms-input-placeholder,
+    input[type=tel]:focus:-ms-input-placeholder,
+    input[type=text]:focus:-ms-input-placeholder,
+    input[type=url]:focus:-ms-input-placeholder,
+    textarea:focus:-ms-input-placeholder {
+      color: #ffffff; }
   input:not([type]).invalid,
-  input[type=text].invalid,
-  input[type=password].invalid,
+  input[type=datetime].invalid,
   input[type=email].invalid,
-  input[type=url].invalid,
+  input[type=number].invalid,
+  input[type=password].invalid,
   input[type=search].invalid,
   input[type=tel].invalid,
-  input[type=number].invalid,
-  input[type=datetime].invalid,
+  input[type=text].invalid,
+  input[type=url].invalid,
   textarea.invalid {
     background-color: #fff0f0;
     border: 1px solid red; }
   input:not([type])::-webkit-input-placeholder,
-  input[type=text]::-webkit-input-placeholder,
-  input[type=password]::-webkit-input-placeholder,
+  input[type=datetime]::-webkit-input-placeholder,
   input[type=email]::-webkit-input-placeholder,
-  input[type=url]::-webkit-input-placeholder,
+  input[type=number]::-webkit-input-placeholder,
+  input[type=password]::-webkit-input-placeholder,
   input[type=search]::-webkit-input-placeholder,
   input[type=tel]::-webkit-input-placeholder,
-  input[type=number]::-webkit-input-placeholder,
-  input[type=datetime]::-webkit-input-placeholder,
+  input[type=text]::-webkit-input-placeholder,
+  input[type=url]::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     color: #ddd; }
   input:not([type]):-moz-placeholder,
-  input[type=text]:-moz-placeholder,
-  input[type=password]:-moz-placeholder,
+  input[type=datetime]:-moz-placeholder,
   input[type=email]:-moz-placeholder,
-  input[type=url]:-moz-placeholder,
+  input[type=number]:-moz-placeholder,
+  input[type=password]:-moz-placeholder,
   input[type=search]:-moz-placeholder,
   input[type=tel]:-moz-placeholder,
-  input[type=number]:-moz-placeholder,
-  input[type=datetime]:-moz-placeholder,
+  input[type=text]:-moz-placeholder,
+  input[type=url]:-moz-placeholder,
   textarea:-moz-placeholder {
     color: #ddd; }
   input:not([type])::-moz-placeholder,
-  input[type=text]::-moz-placeholder,
-  input[type=password]::-moz-placeholder,
+  input[type=datetime]::-moz-placeholder,
   input[type=email]::-moz-placeholder,
-  input[type=url]::-moz-placeholder,
+  input[type=number]::-moz-placeholder,
+  input[type=password]::-moz-placeholder,
   input[type=search]::-moz-placeholder,
   input[type=tel]::-moz-placeholder,
-  input[type=number]::-moz-placeholder,
-  input[type=datetime]::-moz-placeholder,
+  input[type=text]::-moz-placeholder,
+  input[type=url]::-moz-placeholder,
   textarea::-moz-placeholder {
     color: #ddd; }
   input:not([type]):-ms-input-placeholder,
-  input[type=text]:-ms-input-placeholder,
-  input[type=password]:-ms-input-placeholder,
+  input[type=datetime]:-ms-input-placeholder,
   input[type=email]:-ms-input-placeholder,
-  input[type=url]:-ms-input-placeholder,
+  input[type=number]:-ms-input-placeholder,
+  input[type=password]:-ms-input-placeholder,
   input[type=search]:-ms-input-placeholder,
   input[type=tel]:-ms-input-placeholder,
-  input[type=number]:-ms-input-placeholder,
-  input[type=datetime]:-ms-input-placeholder,
+  input[type=text]:-ms-input-placeholder,
+  input[type=url]:-ms-input-placeholder,
   textarea:-ms-input-placeholder {
     color: #ddd; }
 
@@ -705,14 +815,17 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   box-sizing: content-box; }
   html[data-browser*="flexible"] .grid {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     html[data-browser*="flexible"] .grid > div {
       display: block;
       min-height: 1px;
       -webkit-box-flex: 0;
+      -webkit-flex: none;
       -ms-flex: none;
       flex: none; }
   html[data-browser*="not-flex"] .grid {
@@ -730,11 +843,13 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   html[data-browser*="flexible"] .grid {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap; }
   html[data-browser*="flexible"] .grid_nowrap {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap; }
   .grid > div {
